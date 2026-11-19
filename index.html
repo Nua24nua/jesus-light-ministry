@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Jesus Light Ministry — Bible verses, worship songs, Christian videos and prayer.">
+  <meta name="theme-color" content="#081629">
+  <title>Jesus Light Ministry | Faith, Hope & Love</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root{--navy:#081629;--navy2:#102744;--gold:#d8b66a;--cream:#f7f2e8;--muted:#b8c3d1;--white:#fff}
+    *{box-sizing:border-box} html{scroll-behavior:smooth} body{margin:0;background:var(--navy);color:var(--cream);font-family:Inter,Arial,sans-serif;line-height:1.6}
+    a{color:inherit;text-decoration:none} .wrap{width:min(1120px,92%);margin:auto}
+    header{position:sticky;top:0;z-index:20;background:rgba(8,22,41,.94);backdrop-filter:blur(12px);border-bottom:1px solid #ffffff18}
+    .nav{height:76px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+    .brand{font-family:"Cormorant Garamond",serif;font-size:1.55rem;font-weight:700;letter-spacing:.4px;color:var(--gold)}
+    .brand small{display:block;font:500 .58rem Inter,sans-serif;letter-spacing:3px;color:#dce3ec;text-transform:uppercase}
+    nav{display:flex;align-items:center;gap:22px;font-size:.88rem;color:#e4eaf1} nav a:hover{color:var(--gold)}
+    .lang{background:#142b48;color:white;border:1px solid #ffffff30;border-radius:20px;padding:8px 12px}
+    .menu{display:none;background:none;color:white;border:0;font-size:1.5rem}
+    .hero{min-height:620px;display:flex;align-items:center;position:relative;overflow:hidden;background:linear-gradient(90deg,rgba(5,15,29,.94),rgba(5,15,29,.62)),url('https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=2000&q=85') center/cover}
+    .hero:after{content:"";position:absolute;inset:auto 0 0;height:130px;background:linear-gradient(transparent,var(--navy))}
+    .hero-content{position:relative;z-index:1;max-width:700px;padding:90px 0}
+    .eyebrow{color:var(--gold);text-transform:uppercase;letter-spacing:4px;font-size:.72rem;font-weight:700}
+    h1,h2,h3{font-family:"Cormorant Garamond",Georgia,serif;line-height:1.08} h1{font-size:clamp(3.2rem,8vw,6.3rem);margin:18px 0}
+    h1 span{color:var(--gold)} .hero p{max-width:590px;color:#d5deea;font-size:1.08rem}
+    .btn{display:inline-block;margin:14px 10px 0 0;padding:13px 22px;border-radius:3px;background:var(--gold);color:#17243a;font-weight:700;font-size:.88rem;border:1px solid var(--gold);cursor:pointer}
+    .btn.outline{background:transparent;color:var(--cream);border-color:#ffffff70}
+    section{padding:82px 0}.section-head{text-align:center;max-width:700px;margin:0 auto 42px}.section-head h2{font-size:clamp(2.3rem,5vw,3.6rem);margin:10px 0}.section-head p{color:var(--muted)}
+    .grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+    .card{background:linear-gradient(145deg,#132b48,#0c1c31);border:1px solid #ffffff17;padding:27px;border-radius:8px;min-height:190px}
+    .icon{font-size:1.8rem;color:var(--gold)} .card h3{font-size:1.65rem;margin:12px 0 8px}.card p{color:var(--muted);font-size:.92rem}
+    .verse{background:linear-gradient(120deg,#142b48,#0b1b30);border-block:1px solid #d8b66a55;text-align:center}
+    .verse blockquote{font-family:"Cormorant Garamond",serif;font-size:clamp(1.8rem,4vw,3rem);max-width:850px;margin:20px auto;color:#fff}
+    .verse cite{color:var(--gold);font-style:normal;letter-spacing:2px;text-transform:uppercase;font-size:.78rem}
+    .two-col{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center}
+    .feature-image{min-height:350px;border-radius:8px;background:linear-gradient(#08162922,#08162955),url('https://images.unsplash.com/photo-1438232992991-995b7058bbb3?auto=format&fit=crop&w=1100&q=85') center/cover}
+    .two-col h2{font-size:3rem;margin:8px 0 18px}.two-col p{color:var(--muted)}
+    .media-box{background:#050f1e;border:1px solid #ffffff20;border-radius:8px;overflow:hidden}
+    .media-placeholder{aspect-ratio:16/9;display:grid;place-items:center;background:linear-gradient(135deg,#1b3554,#081629);color:var(--gold);font-size:3rem}
+    .media-box .pad{padding:18px}.media-box h3{font-size:1.45rem;margin:0 0 6px}.media-box p{margin:0;color:var(--muted);font-size:.88rem}
+    .form{max-width:720px;margin:auto;background:#102744;padding:30px;border:1px solid #ffffff20;border-radius:8px}
+    label{display:block;font-size:.85rem;margin:14px 0 6px;color:#e7edf5}
+    input,textarea,select{width:100%;padding:13px;background:#081629;border:1px solid #ffffff30;color:white;border-radius:4px;font:inherit}
+    textarea{min-height:120px;resize:vertical}.form-note{color:var(--muted);font-size:.8rem}
+    footer{background:#050e1b;padding:42px 0 24px;border-top:1px solid #ffffff18}
+    .footer-row{display:flex;justify-content:space-between;gap:25px;flex-wrap:wrap}.footer-row p{color:var(--muted);max-width:430px}
+    .copyright{border-top:1px solid #ffffff18;margin-top:30px;padding-top:18px;color:#8e9aaa;font-size:.8rem}
+    .notice{display:none;padding:12px;background:#183d32;color:#d9ffed;margin-top:14px;border-radius:4px}
+    @media(max-width:800px){nav{display:none;position:absolute;top:76px;left:0;right:0;background:#081629;padding:20px;flex-direction:column;align-items:flex-start;border-bottom:1px solid #ffffff20}nav.open{display:flex}.menu{display:block}.grid{grid-template-columns:1fr 1fr}.two-col{grid-template-columns:1fr}.hero{min-height:560px}}
+    @media(max-width:540px){.grid{grid-template-columns:1fr}.nav{height:68px}.hero{min-height:540px}section{padding:62px 0}.form{padding:20px}}
+  </style>
+</head>
+<body>
+<header>
+  <div class="wrap nav">
+    <a class="brand" href="#home">JESUS LIGHT MINISTRY<small>Faith • Hope • Love</small></a>
+    <button class="menu" aria-label="Open menu" onclick="document.querySelector('nav').classList.toggle('open')">☰</button>
+    <nav>
+      <a href="#home" data-en="Home" data-hi="होम" data-or="ମୁଖ୍ୟ ପୃଷ୍ଠା">Home</a>
+      <a href="#bible" data-en="Bible" data-hi="बाइबल" data-or="ବାଇବଲ">Bible</a>
+      <a href="#songs" data-en="Songs" data-hi="गीत" data-or="ଗୀତ">Songs</a>
+      <a href="#videos" data-en="Videos" data-hi="वीडियो" data-or="ଭିଡିଓ">Videos</a>
+      <a href="#prayer" data-en="Prayer" data-hi="प्रार्थना" data-or="ପ୍ରାର୍ଥନା">Prayer</a>
+      <a href="#about" data-en="About" data-hi="हमारे बारे में" data-or="ଆମ ବିଷୟରେ">About</a>
+    </nav>
+    <select class="lang" id="language" aria-label="Choose language">
+      <option value="en">English</option><option value="hi">हिन्दी</option><option value="or">ଓଡ଼ିଆ</option>
+    </select>
+  </div>
+</header>
+
+<main>
+  <section class="hero" id="home">
+    <div class="wrap hero-content">
+      <div class="eyebrow" data-en="A place to grow in faith" data-hi="विश्वास में बढ़ने का स्थान" data-or="ବିଶ୍ୱାସରେ ବୃଦ୍ଧି ପାଇଁ ଏକ ସ୍ଥାନ">A place to grow in faith</div>
+      <h1 data-en-html="Let His Light<br><span>Shine in You</span>" data-hi-html="उनका प्रकाश<br><span>आपमें चमके</span>" data-or-html="ତାଙ୍କ ଆଲୋକ<br><span>ଆପଣଙ୍କ ମଧ୍ୟରେ ଝଲସୁ</span>">Let His Light<br><span>Shine in You</span></h1>
+      <p data-en="Welcome to Jesus Light Ministry — a place for Scripture, worship, encouragement and prayer. Discover hope in God's Word and share His love every day."
+         data-hi="Jesus Light Ministry में आपका स्वागत है — बाइबल वचन, आराधना, प्रोत्साहन और प्रार्थना का एक स्थान। परमेश्वर के वचन में आशा पाएँ।"
+         data-or="Jesus Light Ministry କୁ ସ୍ୱାଗତ — ବାଇବଲ ବାଣୀ, ଉପାସନା, ଉତ୍ସାହ ଓ ପ୍ରାର୍ଥନାର ଏକ ସ୍ଥାନ। ଈଶ୍ୱରଙ୍କ ବାକ୍ୟରେ ଆଶା ପାଆନ୍ତୁ।">Welcome to Jesus Light Ministry — a place for Scripture, worship, encouragement and prayer. Discover hope in God's Word and share His love every day.</p>
+      <a class="btn" href="#bible" data-en="Explore the Bible" data-hi="बाइबल पढ़ें" data-or="ବାଇବଲ ପଢ଼ନ୍ତୁ">Explore the Bible</a>
+      <a class="btn outline" href="#videos" data-en="Watch Videos" data-hi="वीडियो देखें" data-or="ଭିଡିଓ ଦେଖନ୍ତୁ">Watch Videos</a>
+    </div>
+  </section>
+
+  <section class="verse" id="verse">
+    <div class="wrap">
+      <div class="eyebrow" data-en="Verse of encouragement" data-hi="प्रेरणा का वचन" data-or="ଉତ୍ସାହର ବାଣୀ">Verse of encouragement</div>
+      <blockquote id="dailyVerse">“The Lord is my shepherd; I shall not want.”</blockquote>
+      <cite id="verseRef">Psalm 23:1 (KJV)</cite>
+      <div><button class="btn outline" onclick="newVerse()" data-en="Read another verse" data-hi="एक और वचन पढ़ें" data-or="ଆଉ ଏକ ବାଣୀ ପଢ଼ନ୍ତୁ">Read another verse</button></div>
+    </div>
+  </section>
+
+  <section id="bible">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow" data-en="Grow through the Word" data-hi="वचन के द्वारा बढ़ें" data-or="ବାକ୍ୟ ଦ୍ୱାରା ବୃଦ୍ଧି ପାଆନ୍ତୁ">Grow through the Word</div>
+        <h2 data-en="Explore the Bible" data-hi="बाइबल का अध्ययन करें" data-or="ବାଇବଲ ଅଧ୍ୟୟନ କରନ୍ତୁ">Explore the Bible</h2>
+        <p data-en="Start reading, reflect on Scripture and build a daily habit of spending time in God's Word."
+           data-hi="पढ़ना शुरू करें, वचन पर मनन करें और परमेश्वर के वचन के लिए प्रतिदिन समय निकालें।"
+           data-or="ପଢ଼ିବା ଆରମ୍ଭ କରନ୍ତୁ, ବାକ୍ୟ ଉପରେ ଧ୍ୟାନ କରନ୍ତୁ ଏବଂ ପ୍ରତିଦିନ ଈଶ୍ୱରଙ୍କ ବାକ୍ୟ ପାଇଁ ସମୟ ଦିଅନ୍ତୁ।">Start reading, reflect on Scripture and build a daily habit of spending time in God's Word.</p>
+      </div>
+      <div class="grid">
+        <article class="card"><div class="icon">📖</div><h3>Old Testament</h3><p>Explore the books, stories, wisdom and promises of the Old Testament.</p><a class="btn outline" href="https://www.bible.com/" target="_blank" rel="noopener">Read Bible ↗</a></article>
+        <article class="card"><div class="icon">✝</div><h3>New Testament</h3><p>Learn about the life and teachings of Jesus and the early church.</p><a class="btn outline" href="https://www.bible.com/" target="_blank" rel="noopener">Read Bible ↗</a></article>
+        <article class="card"><div class="icon">🕯️</div><h3>Daily Reading</h3><p>Set aside a quiet moment for reading, reflection and prayer each day.</p><a class="btn outline" href="#verse">Today's verse ↓</a></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="songs" style="background:#0b1c31">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">Worship & praise</div><h2>Christian Songs</h2><p>Listen, worship and be encouraged through Hindi, Odia and English Christian music.</p></div>
+      <div class="grid">
+        <article class="media-box"><div class="media-placeholder">♫</div><div class="pad"><h3>Hindi Worship</h3><p>Add your Hindi worship song playlist or YouTube link here.</p><a class="btn outline" href="https://www.youtube.com/" target="_blank" rel="noopener">Open YouTube ↗</a></div></article>
+        <article class="media-box"><div class="media-placeholder">♫</div><div class="pad"><h3>Odia Christian Songs</h3><p>Share Odia worship songs, lyrics and karaoke videos.</p><a class="btn outline" href="https://www.youtube.com/" target="_blank" rel="noopener">Open YouTube ↗</a></div></article>
+        <article class="media-box"><div class="media-placeholder">♫</div><div class="pad"><h3>English Worship</h3><p>Feature your favourite English praise and worship collection.</p><a class="btn outline" href="https://www.youtube.com/" target="_blank" rel="noopener">Open YouTube ↗</a></div></article>
+      </div>
+    </div>
+  </section>
+
+  <section id="videos">
+    <div class="wrap two-col">
+      <div class="feature-image" role="img" aria-label="Peaceful landscape"></div>
+      <div><div class="eyebrow">Watch & be inspired</div><h2>Faith-filled Videos</h2><p>Discover Bible teachings, testimonies, worship sessions and uplifting Christian messages. Replace the sample button link with your YouTube channel URL.</p><a class="btn" href="https://www.youtube.com/" target="_blank" rel="noopener">Visit YouTube Channel ↗</a></div>
+    </div>
+  </section>
+
+  <section id="prayer" style="background:#0b1c31">
+    <div class="wrap">
+      <div class="section-head"><div class="eyebrow">You are not alone</div><h2>Prayer & Encouragement</h2><p>Share a prayer intention with someone you trust in your church or community.</p></div>
+      <form class="form" id="prayerForm">
+        <label for="pname">Your name (optional)</label><input id="pname" name="name" placeholder="Enter your name">
+        <label for="pemail">Email (optional)</label><input id="pemail" name="email" type="email" placeholder="you@example.com">
+        <label for="pmessage">Prayer request</label><textarea id="pmessage" name="message" required placeholder="Write your prayer request..."></textarea>
+        <button class="btn" type="submit">Prepare Prayer Request</button>
+        <p class="form-note">This starter form opens your email app; it does not store or send requests automatically. Add your ministry email in the script before publishing.</p>
+        <div class="notice" id="formNotice" role="status"></div>
+      </form>
+    </div>
+  </section>
+
+  <section id="about">
+    <div class="wrap two-col">
+      <div><div class="eyebrow">Our purpose</div><h2>Sharing His Light</h2><p>Jesus Light Ministry exists to encourage people through the message of Jesus Christ, the truth of Scripture, worship and prayer. Our hope is to share faith, hope and love with people in every language and community.</p><p><strong style="color:var(--gold)">“You are the light of the world.” — Matthew 5:14</strong></p></div>
+      <div class="card"><div class="icon">🤍</div><h3>Our mission</h3><p>To make Christian resources welcoming and accessible, encourage daily time in God's Word, and share uplifting music and messages.</p><h3>Our values</h3><p>Faith • Hope • Love • Prayer • Service</p></div>
+    </div>
+  </section>
+</main>
+
+<footer id="contact">
+  <div class="wrap">
+    <div class="footer-row">
+      <div><a class="brand" href="#home">JESUS LIGHT MINISTRY<small>Faith • Hope • Love</small></a><p>A digital place for Bible reading, worship, prayer and encouragement.</p></div>
+      <div><strong>Connect with us</strong><p><a href="https://www.youtube.com/" target="_blank" rel="noopener">YouTube</a> &nbsp;·&nbsp; <a href="mailto:hello@example.com">Email</a></p><p style="font-size:.8rem;color:#8e9aaa">Replace sample links with your official contact details.</p></div>
+    </div>
+    <div class="copyright">© <span id="year"></span> Jesus Light Ministry. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+  const verses = [
+    ['“The Lord is my shepherd; I shall not want.”','Psalm 23:1 (KJV)'],
+    ['“Be strong and of a good courage; be not afraid.”','Joshua 1:9 (KJV)'],
+    ['“God is our refuge and strength, a very present help in trouble.”','Psalm 46:1 (KJV)'],
+    ['“I can do all things through Christ which strengtheneth me.”','Philippians 4:13 (KJV)'],
+    ['“The Lord is good to all: and his tender mercies are over all his works.”','Psalm 145:9 (KJV)']
+  ];
+  function newVerse(){const v=verses[Math.floor(Math.random()*verses.length)];document.getElementById('dailyVerse').textContent=v[0];document.getElementById('verseRef').textContent=v[1]}
+  document.getElementById('year').textContent=new Date().getFullYear();
+  document.getElementById('language').addEventListener('change',e=>{
+    const lang=e.target.value;
+    document.querySelectorAll('[data-'+lang+']').forEach(el=>el.textContent=el.getAttribute('data-'+lang));
+    document.querySelectorAll('[data-'+lang+'-html]').forEach(el=>el.innerHTML=el.getAttribute('data-'+lang+'-html'));
+  });
+  document.getElementById('prayerForm').addEventListener('submit',e=>{
+    e.preventDefault();
+    const name=document.getElementById('pname').value.trim();
+    const email=document.getElementById('pemail').value.trim();
+    const message=document.getElementById('pmessage').value.trim();
+    const to='hello@example.com'; // Replace with your ministry email address.
+    const subject=encodeURIComponent('Prayer Request - Jesus Light Ministry');
+    const body=encodeURIComponent('Name: '+name+'\nEmail: '+email+'\n\nPrayer request:\n'+message);
+    document.getElementById('formNotice').style.display='block';
+    document.getElementById('formNotice').textContent='Your email app will open. Update hello@example.com in the website code to your ministry email before publishing.';
+    window.location.href='mailto:'+to+'?subject='+subject+'&body='+body;
+  });
+</script>
+</body>
+</html>
